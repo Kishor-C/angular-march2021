@@ -1,0 +1,26 @@
+<div>
+    <h1>Example on directive demo</h1>
+    <h3 *ngIf = "messageStatus">Message Status: {{messageStatus}}</h3>
+    <h3 *ngIf = "responseStatus">Response: {{responseStatus}}</h3>
+    <h3 *ngIf = "message">Message: {{message}}</h3>
+
+    <h3>Using Ng For with simple values</h3>
+    <ul>
+        <li *ngFor = "let item of names">{{item}}</li>
+    </ul>
+    <h3>Using Ng For with complex values</h3>
+    <ul>
+        <li *ngFor = "let u of users">Hello {{u.name}}, Dob is {{u.dob}}</li>
+    </ul>
+    <h3>Using NgFor to create dynamic tables</h3>
+    <table border = "1">
+        <tr>
+            <th>Name</th><th>Dob</th>
+        </tr>
+        <tr *ngFor = "let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.dob}}</td>
+        </tr>
+    </table>
+</div>
+
