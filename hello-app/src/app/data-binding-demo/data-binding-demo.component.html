@@ -1,0 +1,13 @@
+<div>
+    <h2>Databinding demo</h2>
+    <hr />
+    <h3>Interpolation</h3>
+    Name is: {{username}}
+    <hr />
+    <h3>Property binding</h3>
+    <input type = "button" value = "ClickHere" [disabled] = "isDisabled">
+    <br />
+    Value of isDisabled: {{isDisabled}}
+    <br />
+    <input type = "button" value = "Change" (click) = "handleClick()">
+</div>

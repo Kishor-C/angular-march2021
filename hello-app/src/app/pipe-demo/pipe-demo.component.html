@@ -1,0 +1,27 @@
+<div>
+    <h3>Show the single data</h3>
+    Hello {{person.name}}, the id is {{person.id}}, your dob is 
+    {{person.dob}} and salary is {{person.salary}}
+    <hr />
+    <div>
+        Formatting string: {{person.name | uppercase}} <br />
+        Date : {{person.dob | date}} <br />
+        Date : {{person.dob | date : 'dd-MMMM-yyyy'}} <br />
+        Currency: {{person.salary | currency}} <br />
+        Currency : {{person.salary | currency : 'INR'}}
+    </div>
+
+    <div>
+        <h3>All the data using *ngFor</h3>
+        <ol>
+            <li *ngFor = "let p of allPerson">
+                Name: {{p.name | uppercase}}, dob is {{p.dob | date}}
+            </li>
+        </ol>
+    </div>
+    <div>
+        <h2>Using custom pipe</h2>
+        <h3>Length of name: {{person.name | findLength}}</h3>
+    </div>
+
+</div>
