@@ -1,0 +1,12 @@
+<div>
+    <h2>Parent Component</h2> 
+    <h3>Counter inside parent : {{childCounter}}</h3>
+    <hr />
+    <app-child [childData] = "parentData" 
+            (counterEvent) = "childCounter = $event"></app-child>
+    <!--
+        Here counterEvent generates the event which is the counter value
+        of child component which is assigned to the counter value of 
+        parent component through $event
+    -->
+</div>

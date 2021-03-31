@@ -9,6 +9,7 @@ export class DataBindingDemoComponent  {
 
   username = "Bruce";
   isDisabled = false;
+  emailId = "bruce@gmail.com";
 
   handleClick() {
     this.isDisabled = !this.isDisabled;

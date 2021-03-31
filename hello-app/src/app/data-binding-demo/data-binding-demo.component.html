@@ -10,4 +10,10 @@
     Value of isDisabled: {{isDisabled}}
     <br />
     <input type = "button" value = "Change" (click) = "handleClick()">
+    <h3>Two way databinding</h3>
+    <input type = "text" [(ngModel)] = "emailId">
+    <input type = "text" [(ngModel)] = "emailId">
+    <div>
+        <h3 [class.blueColor] = "isDisabled">CSS Class Binding</h3>
+    </div>
 </div>

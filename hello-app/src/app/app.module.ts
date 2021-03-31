@@ -9,16 +9,24 @@ import { DemoComponent } from './demo/demo.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component'
 import { LengthFinder } from './pipe-demo/custom-pipe';
 import { DataBindingDemoComponent } from './data-binding-demo/data-binding-demo.component';
-
+import { FormsModule } from '@angular/forms';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserItemComponent } from './user-item/user-item.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent, EmployeeComponent, PersonComponent, DirectiveDemoComponent, DemoComponent, PipeDemoComponent,
     LengthFinder,
-    DataBindingDemoComponent
+    DataBindingDemoComponent,
+    UserListComponent,
+    UserItemComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

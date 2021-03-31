@@ -1,0 +1,15 @@
+<div>
+    <h3>This is user list component</h3>
+    <h4>Firstname in parent: {{firstname}}</h4>
+    <hr />
+    <div style = "text-align: center;">
+        <app-user-item></app-user-item>
+    </div>
+    <div style = "text-align: center;">
+        <app-user-item [username] = "firstname"></app-user-item>
+    </div>
+    <div *ngFor = "let name of namesArray">
+        <app-user-item [username] = "name"></app-user-item>
+    </div>
+
+</div>
