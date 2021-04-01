@@ -14,6 +14,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { FormDemoComponent } from './form-demo/form-demo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ChildComponent } from './child/child.component';
     UserListComponent,
     UserItemComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    FormDemoComponent
   ],
   imports: [
     BrowserModule, FormsModule
