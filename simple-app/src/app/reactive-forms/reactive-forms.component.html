@@ -1,0 +1,16 @@
+
+<div>
+    <h2>Reactive Forms Demo</h2>
+    <form [formGroup] = "login" (ngSubmit) = "handleSubmit()">
+        <label>
+            Username <input type = "text" formControlName = "username">
+        </label>
+        <br />
+        <label>
+            Password <input type = "text" formControlName = "password">
+        </label>
+        <br />
+        <input type = "submit">
+    </form>
+    
+</div>
