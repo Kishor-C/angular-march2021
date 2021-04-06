@@ -4,13 +4,28 @@
     <form [formGroup] = "login" (ngSubmit) = "handleSubmit()">
         <label>
             Username <input type = "text" formControlName = "username">
+            <span class = "alert alert-danger" 
+            [hidden] = "login.controls['username'].valid || login.controls['username'].pristine">Username has errors</span>
         </label>
         <br />
         <label>
             Password <input type = "text" formControlName = "password">
         </label>
         <br />
+        <label>
+            Dob <input type = "date" formControlName = "dob"> <br />
+        </label>
+        <br />
+        <label>
+            Qualificattion: 
+            <select>
+                <option *ngFor = "let q of qualificationsDB">{{q}}</option>
+            </select>
+        </label> <br />
         <input type = "submit">
     </form>
-    
+    <div>
+        Valid: {{login.valid}} <br />
+        Username Valid: {{login.controls['username'].valid}}
+    </div>
 </div>

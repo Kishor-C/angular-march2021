@@ -1,0 +1,10 @@
+<div>
+    <h2>This is first component</h2>
+    <button (click) = "handleClick()" class = "btn btn-primary">Click</button>
+    <div>
+        <h3>List of users</h3>
+        <ol>
+           <li *ngFor = "let user of allUsers">{{user}}</li> 
+        </ol>
+    </div>
+</div>

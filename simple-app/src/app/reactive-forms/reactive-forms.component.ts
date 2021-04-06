@@ -11,15 +11,21 @@ export class ReactiveFormsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  qualificationsDB = ["BE", "BCA", "BCom"];
 
   login = this._form.group({
-    username : [''],
-    password : ['']
+    username : ['', Validators.compose([Validators.required, 
+      Validators.pattern("[a-zA-Z]+")])],
+    password : ['', Validators.compose([Validators.required])],
+    dob : ['', ]
   });
 
   handleSubmit() {
     console.log(this.login.value);
     this.login.reset();
+    this.login.controls['username'].setValue("Dummy User");
+    
   }
 
 }
