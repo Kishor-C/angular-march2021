@@ -7,6 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ReactiveFormsComponent implements OnInit {
 
+  // FormBuilder object is supplied by angular
   constructor(private _form : FormBuilder) { }
 
   ngOnInit(): void {

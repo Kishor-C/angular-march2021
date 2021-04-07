@@ -1,1 +1,20 @@
-<p>second works!</p>
+<div>
+    <h2>Second Component calling Json placeholder service</h2>
+    <div>
+        <!-- <p *ngFor = "let u of users">Id: {{u.id}}, Name: {{u.name}}</p> -->
+        <table class = "table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Street</th>
+            </tr>
+            <tr *ngFor = "let u of users">
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.address.street}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

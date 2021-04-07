@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { SecondComponent } from './second/second.component';
     SecondComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
