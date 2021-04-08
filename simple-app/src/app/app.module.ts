@@ -9,6 +9,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     TemplateFormsComponent,
     ReactiveFormsComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule

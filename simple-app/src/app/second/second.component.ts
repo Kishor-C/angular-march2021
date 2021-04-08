@@ -9,7 +9,7 @@ import { DemoService } from '../demo.service';
 })
 export class SecondComponent  {
 
-  users = [];
+  users : any = [];
   constructor(private _service : DemoService) {}
 
   // lifecycle method called after the constructor

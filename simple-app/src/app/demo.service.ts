@@ -18,7 +18,7 @@ export class DemoService {
   // calls the webservice and response data will be stored in the 
   // Observable, this request is not sending any data
   getAllUsers() : Observable<any> {
-    let uri = "https://jsonplaceholder.typicode.com/users"
+    let uri = "https://jsonplaceholder.typicode.com/users";
     return this._http.get(uri);
   }
  

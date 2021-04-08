@@ -1,0 +1,47 @@
+<div>
+    <h2>Performing CRUD opertaions on profile component</h2> <hr />
+
+    <!-- this is form-->
+    <div class = "row">
+        <div class = "col-6">
+            <h3>Storing Profile Data</h3> <hr />
+            <form [formGroup] = "profile" (ngSubmit) = "save()">
+                <label>
+                    Id <input type = "text" formControlName = "id"> 
+                </label>
+                <label>
+                    Name <input type = "text" formControlName = "name">
+                </label>
+                <br />
+                <label>
+                    DOB <input type = "date" formControlName = "dob">
+                </label>
+                <label>
+                    Phone <input type = "text" formControlName = "phone">
+                </label>
+                <br />
+                <input type = "submit" value = "store" class = "btn btn-secondary">
+                <div class = "alert alert-success" *ngIf = "status">{{message}}</div>
+            </form>
+        </div>
+        <div class = "col-6">
+            <h3>List all profiles</h3> <hr />
+            <button class = "btn btn-primary" (click) = "loadAll()">Load</button>
+            <br />
+            <table class = "table">
+                <tr>
+                    <th>Id</th><th>Name</th><th>Dob</th><th>Phone</th>
+                </tr>
+                <tr *ngFor = "let profile of allProfiles">
+                    <td>{{profile.id}}</td>
+                    <td>{{profile.name}}</td>
+                    <td>{{profile.dob}}</td>
+                    <td>{{profile.phone}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class = "row">
+
+    </div>
+</div>
