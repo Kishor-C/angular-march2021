@@ -19,4 +19,9 @@ export class ProfileService {
   storeProfile(data : any) : Observable<any> {
     return this._http.post(this.baseUri, data);
   }
+  deleteById(id : number) : Observable<any> {
+    let uri = `${this.baseUri}/${id}`;
+    return this._http.delete(uri);
+  }
+  
 }

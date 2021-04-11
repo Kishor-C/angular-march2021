@@ -20,8 +20,8 @@
                     Phone <input type = "text" formControlName = "phone">
                 </label>
                 <br />
-                <input type = "submit" value = "store" class = "btn btn-secondary">
-                <div class = "alert alert-success" *ngIf = "status">{{message}}</div>
+                <input type = "submit" value = "Store" class = "btn btn-secondary">
+                <div class = "alert alert-success" *ngIf = "undefined">{{message}}</div>
             </form>
         </div>
         <div class = "col-6">
@@ -31,17 +31,29 @@
             <table class = "table">
                 <tr>
                     <th>Id</th><th>Name</th><th>Dob</th><th>Phone</th>
+                    <th>X</th>
+                    <th>Update</th>
                 </tr>
-                <tr *ngFor = "let profile of allProfiles">
+                <tr *ngFor = "let profile of allProfiles" [hidden] = "updatableTable">
                     <td>{{profile.id}}</td>
                     <td>{{profile.name}}</td>
                     <td>{{profile.dob}}</td>
                     <td>{{profile.phone}}</td>
+                    <td><button class = "btn btn-danger" (click) = "delete(profile.id)">Delete</button></td>
+                    <td><button class = "btn btn-secondary" (click) = "update()">Update</button></td>
                 </tr>
+                <tr *ngFor = "let profile of allProfiles" [hidden] = "updatableTable2">
+                    <td>{{profile.id}}</td>
+                    <td>{{profile.name}}</td>
+                    <td><input type = "date" [value] = "profile.dob"></td>
+                    <td><input type = "number" [value] = "profile.phone"></td>
+                    <td><button class = "btn btn-danger" (click) = "delete(profile.id)">Delete</button></td>
+                    <td><button class = "btn btn-secondary" 
+                        (click) = "saveUpdate(profile)">Update</button></td>
+                </tr>
+               
             </table>
         </div>
     </div>
-    <div class = "row">
-
-    </div>
+    
 </div>

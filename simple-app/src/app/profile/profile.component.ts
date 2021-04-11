@@ -14,10 +14,15 @@ export class ProfileComponent implements OnInit {
   });
 
   allProfiles : any = []; // class Profile - id, name, dob, phone
-  message : string = "";
+
+  message : string | undefined = undefined;
   status : boolean = false;
+  updatableTable : boolean = false;
+  updatableTable2 : boolean = true;
   constructor(private _formBuilder : FormBuilder, 
-    private _service : ProfileService) { }
+    private _service : ProfileService) { 
+      
+    }
 
   ngOnInit(): void {
     
@@ -38,4 +43,17 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+  delete(id : number) : void {
+    this._service.deleteById(id).subscribe((success) => {
+      console.log(success);
+      this.loadAll();
+    });
+  }
+  update() {
+    this.updatableTable = true;
+    this.updatableTable2 = false;
+  }
+  saveUpdate(profile : any) {
+    console.log(profile);
+  }
 }

@@ -10,6 +10,11 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { FetchProfilesComponent } from './fetch-profiles/fetch-profiles.component';
+import { StoreProfilesComponent } from './store-profiles/store-profiles.component';
+import { HomeComponent } from './home/home.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { DeleteProfileComponent } from './delete-profile/delete-profile.component';
 
 
 @NgModule({
@@ -19,10 +24,16 @@ import { ProfileComponent } from './profile/profile.component';
     ReactiveFormsComponent,
     FirstComponent,
     SecondComponent,
-    ProfileComponent
+    ProfileComponent,
+    FetchProfilesComponent,
+    StoreProfilesComponent,
+    HomeComponent,
+    UpdateProfileComponent,
+    DeleteProfileComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
