@@ -33,7 +33,7 @@ import { DeleteProfileComponent } from './delete-profile/delete-profile.componen
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,
-    AppRoutingModule
+     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

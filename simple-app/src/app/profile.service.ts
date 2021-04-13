@@ -24,4 +24,13 @@ export class ProfileService {
     return this._http.delete(uri);
   }
   
+  updateProfile(id : number, data : any) : Observable<any> {
+    let uri = `${this.baseUri}/${id}`;
+    return this._http.put(uri, data)
+  }
+  
+  fetchProfile(id : number) : Observable<any> {
+    let uri = `${this.baseUri}/${id}`;
+    return this._http.get(uri);
+  }
 }

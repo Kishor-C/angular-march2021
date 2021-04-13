@@ -9,7 +9,7 @@ const routes: Routes = [
   {path : "", redirectTo : "fetchProfiles", pathMatch : "prefix"}, 
   {path : 'storeProfile', component : StoreProfilesComponent},
   {path : 'fetchProfiles', component : FetchProfilesComponent},
-  {path : 'updateProfile', component : UpdateProfileComponent},
+  {path : 'updateProfile/:profileId', component : UpdateProfileComponent},
   {path : 'deleteProfile', component : DeleteProfileComponent}
   
 ];

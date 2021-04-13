@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormArray, FormBuilder } from '@angular/forms';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -13,6 +13,8 @@ export class ProfileComponent implements OnInit {
     id : [], name : [], dob : [], phone : []
   });
 
+  
+
   allProfiles : any = []; // class Profile - id, name, dob, phone
 
   message : string | undefined = undefined;
@@ -20,7 +22,7 @@ export class ProfileComponent implements OnInit {
   updatableTable : boolean = false;
   updatableTable2 : boolean = true;
   constructor(private _formBuilder : FormBuilder, 
-    private _service : ProfileService) { 
+    private _service : ProfileService, private _formArray : FormArray) { 
       
     }
 

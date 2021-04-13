@@ -1,1 +1,20 @@
-<p>update-profile works!</p>
+<div>
+    
+    <form [formGroup] = "profile" (ngSubmit) = "updateProfile()">
+        <label>You are updating the profile with the id {{profile.value.id}}</label>
+        <br />
+        <label>
+            Name : <input type = "text" formControlName = "name">
+        </label>
+        <br />
+        <label>
+            Dob : <input type = "text" formControlName = "dob">
+        </label>
+        <br />
+        <label>
+            Phone : <input type = "text" formControlName = "phone">
+        </label>
+        <br />
+        <input type = "submit" value = "Update" class = "btn btn-primary">
+    </form>
+</div>

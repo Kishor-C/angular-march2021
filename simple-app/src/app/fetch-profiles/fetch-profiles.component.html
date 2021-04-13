@@ -1,1 +1,19 @@
-<p>fetch-profiles works!</p>
+<div>
+    <h3>All the profiles</h3>
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>Dob</th><th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let profile of profiles">
+                <td>{{profile.id}} <a routerLink = "/updateProfile/{{profile.id}}" class = "fa fa-pencil"></a></td>
+                <td>{{profile.name}}</td>
+                <td>{{profile.dob}}</td>
+                <td>{{profile.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
